@@ -15,7 +15,7 @@ const blogSchema = new mongoose.Schema(
     },
     author: {
       type:String,
-      ref: 'User',
+   
       required: true,
     },
     category: {
