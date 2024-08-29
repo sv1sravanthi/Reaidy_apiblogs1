@@ -15,7 +15,7 @@ return res.status(200);
 }) 
 const connectDB= async () => {
     try{
-        const connect=await mongoose.connect(process.env.Mongo_uri)
+        const connect=await mongoose.connect(process.env.mongo_uri)
         console.log("db connected")
     }
     catch(err){
@@ -24,7 +24,7 @@ const connectDB= async () => {
    
 };
 connectDB()
- app.listen(5000,()=>{
-    console.log("server is running on 5000 port.....")
+ app.listen(port,()=>{
+    console.log(`server running on ${port}`)
 })
 app.use('/api',blogroutes)
