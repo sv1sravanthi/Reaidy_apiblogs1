@@ -25,6 +25,6 @@ const connectDB= async () => {
 };
 connectDB()
  app.listen(port,()=>{
-    console.log(`server running on ${port}`)
+    console.log(`server running on ${port}` )
 })
 app.use('/api',blogroutes)
